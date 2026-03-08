@@ -1,36 +1,160 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Public Portal E-commerce Platform
 
-## Getting Started
+A modern e-commerce platform with VIP membership system, built with Next.js 14, TypeScript, and TailwindCSS.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### ✅ **Core E-commerce Features**
+- **Product Catalog** - Browse, search, and filter products
+- **Shopping Cart** - Add, remove, and manage items with real-time calculations
+- **Checkout System** - Complete order processing flow
+- **User Authentication** - Login/Register with validation
+
+### 🏆 **VIP Membership System**
+- **4-Tier System** - Bronze, Silver, Gold, Platinum
+- **Commission Earnings** - 5% to 20% based on tier
+- **Referral Program** - Invite friends and earn commissions
+- **Dashboard** - Track earnings, referrals, and progress
+
+### 🎨 **Modern UI/UX**
+- Responsive design with TailwindCSS
+- Professional component library
+- Lucide React icons
+- Gradient-based color scheme
+
+## 🏗️ Architecture
+
+### **Tech Stack**
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** TailwindCSS
+- **State Management:** React Context + useReducer
+- **Icons:** Lucide React
+- **Storage:** LocalStorage (cart, auth)
+
+### **Project Structure**
+```
+public-portal/
+├── app/                    # Next.js App Router pages
+│   ├── cart/              # Shopping cart
+│   ├── checkout/          # Checkout process
+│   ├── dashboard/         # User dashboard + invite system
+│   ├── login/             # Authentication
+│   ├── products/          # Product catalog
+│   ├── register/          # User registration
+│   ├── vip/               # VIP membership system
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Homepage
+├── components/            # Reusable components
+│   ├── cart/              # Cart-specific components
+│   ├── ui/                # UI primitives (Button, Card, etc.)
+│   ├── footer.tsx         # Site footer
+│   ├── header.tsx         # Site header
+│   └── product-card.tsx   # Product display component
+├── hooks/                 # Custom React hooks
+├── lib/                   # Utilities & contexts
+│   ├── api-client.ts      # Mock API client
+│   ├── cart-context.tsx   # Cart state management
+│   └── utils.ts           # Utility functions
+└── public/               # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **Prerequisites**
+- Node.js 18+ 
+- npm or yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Installation**
+```bash
+# Clone the repository
+git clone https://github.com/bagyi600/public-portal-ecommerce.git
+cd public-portal-ecommerce
 
-## Learn More
+# Install dependencies
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Start development server
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **Development Server**
+The application will be available at:
+- **Local:** http://localhost:3000
+- **Network:** http://[YOUR_IP]:3000
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **Demo Credentials**
+- **Email:** demo@sheinvip.com
+- **Password:** Demo123!
 
-## Deploy on Vercel
+## 📦 Key Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Cart System**
+- Complete state management with useReducer
+- LocalStorage persistence
+- Automatic calculations (tax, shipping, discounts)
+- Discount code support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### **VIP Tiers**
+1. **Bronze** - 5% commission (Free)
+2. **Silver** - 10% commission ($9.99/month)
+3. **Gold** - 15% commission ($19.99/month) ⭐ Most Popular
+4. **Platinum** - 20% commission ($49.99/month)
+
+### **Mock API**
+- Simulates backend responses
+- No external dependencies needed
+- Configurable delay for realistic experience
+- Compatible with real API integration
+
+## 🔧 Development
+
+### **Available Scripts**
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run start    # Start production server
+```
+
+### **Environment Variables**
+Create `.env.local` for production:
+```env
+NEXT_PUBLIC_API_URL=http://your-api-url.com/api/v1
+```
+
+### **Type Checking**
+```bash
+npx tsc --noEmit  # Check for TypeScript errors
+```
+
+## 🎯 Future Enhancements
+
+### **Phase 2: Backend Integration**
+- Real API endpoints with Express/NestJS
+- PostgreSQL database with Prisma
+- JWT authentication
+- Payment gateway integration
+
+### **Phase 3: Admin Panel**
+- Product management (CRUD)
+- Order processing
+- User management
+- Analytics dashboard
+
+### **Phase 4: Advanced Features**
+- Real-time notifications
+- Email marketing integration
+- Advanced analytics
+- Mobile app (React Native)
+
+## 📄 License
+
+This project is proprietary software.
+
+## 👥 Contact
+
+For questions or support, please contact the development team.
+
+---
+
+**Built with ❤️ using Next.js, TypeScript, and TailwindCSS**
